@@ -25,6 +25,9 @@
 
         <tr>
             <th>
+                <a href="?sort=price_down">дешевые</a>
+                <a href="?sort=price_up">дорогие</a>
+                <a href="#"></a>
             <th>
             <th>
             <th>

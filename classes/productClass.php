@@ -13,15 +13,16 @@ class Product extends Db {
 
     public function GetAllProducts(){
         $products = mysqli_query($this->Connect(), 'SELECT * FROM product');
-        return $products;
+
+        if( ! mysqli_num_rows($products) ) {
+            return false;
+        } else {
+            return $products;
+        }
     }
 
-//    public function IntValidation($int){
-//        $number = intval($int);
+//    public function IdValidation(){
 //
-//        if($number){
-//            return $number;
-//        }
 //    }
 
     public function GetProduct($id){
