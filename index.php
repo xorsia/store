@@ -8,7 +8,7 @@
 require_once ("./classes/productClass.php");
 include_once ('header.php');
     $db = new Product();
-    $products = $db->ShowAllProducts();
+    $products = $db->GetAllProducts();
     //титульная страница
     //сделать вывод парочку статей из блога вывести лучшие товары со скидкой вывести главную информацию которкую про нас
 //    echo "<table border='1'>";

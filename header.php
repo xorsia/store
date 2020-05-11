@@ -18,7 +18,7 @@
     <tr>
         <th><a href="index.php">главная</a></th>
         <th><a href="product.php"> продукты</a></th>
-        <th><a href="top"> блог</a></th>
+        <th><a href="blog.php"> блог</a></th>
         <th><a href="top"> контакты</a></th>
         <th><a href="top"> поддержка</a></th>
     </tr>
