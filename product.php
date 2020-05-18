@@ -14,7 +14,6 @@ include_once ('header.php');
 
     if($model=$product->GetProduct($id)){
         $row = mysqli_fetch_array($model);
-//        $row = $model;
         echo "<table border='1'>";
         echo "<tr>";
         echo "<th>";
@@ -43,7 +42,7 @@ include_once ('header.php');
         echo "</th>";
         echo "</tr>";
         echo "</table>";
-        include './classes/commentBlock.php';
+        include './blocks/comments.php';
             $commentObj = new Comment();
             $commentObj->AddComment($id,$_POST['name'],$_POST['comment']);
             $commentModel = $commentObj->GetCommentList($row[0]);

@@ -32,7 +32,11 @@
             <th>
             <th>
             <th width="100">
-                <form>
+<!--                <form>-->
+<!--                    <p><input type="search" name="q" placeholder="Поиск по сайту">-->
+<!--                        <input type="submit" value="Найти"></p>-->
+<!--                </form>-->
+                <form action="search.php">
                     <p><input type="search" name="q" placeholder="Поиск по сайту">
                         <input type="submit" value="Найти"></p>
                 </form>
