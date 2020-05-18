@@ -23,6 +23,16 @@ class Product extends Db {
         }
     }
 
+    public function Pagination(){
+//        $result = mysqli_query($this->Connect(),"SELECT * FROM product");
+//        $posts = mysqli_fetch_row($result);
+//        $num = 3; //products count in 1 page
+//        $total = intval(($posts - 1) / $num) + 1;
+//        var_dump($total);
+        exit();
+
+    }
+
     public function ProductIdValidation($product_id){
 
         $this->product_id = intval($product_id);

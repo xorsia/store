@@ -24,6 +24,7 @@ class Comment extends Db {
 
     }
 
+
     public function CommentValidation($product_id, $name, $text){
 
         $this->product_id = intval($product_id);
