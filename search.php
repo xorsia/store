@@ -6,43 +6,43 @@
  * Time: 10:53
  */
 
-
 include('./header.php');
-require_once('./classes/productClass.php');
-require_once('./classes/blogClass.php');
+//require_once('./classes/productClass.php');
+//require_once('./classes/blogClass.php');
+require_once('./classes/searchClass.php');
 
-function qValidation($q){
-    $qText =  filter_var($q, FILTER_SANITIZE_SPECIAL_CHARS);
-    if(!$qText){
-        return 0;
-    }
-    return $qText;
-}
+//function qValidation($q){
+//    $qText =  filter_var($q, FILTER_SANITIZE_SPECIAL_CHARS);
+//    if(!$qText){
+//        return 0;
+//    }
+//    return $qText;
+//}
 
-$q = qValidation($_GET['q']);
+//function ShowSearchModels($model){
+//    if(!$model){
+//        return "not found";
+//    }
+//}
 
-$searchProd = new Product();
-$searchBlog = new Blog();
+//$q = qValidation($_GET['q']);
 
-//создать массив данных которые получил
-//валидация входящих данных q;;;;
-
-
-$modelBlog = mysqli_fetch_array($searchBlog->searchPost($q));
-$modelProd = $searchProd->searchProduct($q);
-
-$qcolor = str_replace($modelBlog['title'],"<h1 color='red'>".$q."</h1>",$modelBlog['title']);
-
-print_r($qcolor);
+//$searchProd = new Product();
+//$searchBlog = new Blog();
 
 
-echo "<hr>";
 
-$phrase  = "You should eat fruits, vegetables, and fiber every day.";
-$healthy = array("fruits", "vegetables", "fiber");
-$yummy   = array("pizza", "beer", "ice cream");
+//$modelBlog = str_replace("$q","<b style='background-color: red; color: gold'>$q</b>",mysqli_fetch_array($searchBlog->searchPost($q)));
+//echo "<pre>";
+//print_r($modelBlog);
+//
+//echo "<hr>";
 
-$newphrase = str_replace($healthy, $yummy, $phrase);
+$search = new Search();
+$result = $search->startSearch($_GET['q']);
 
+echo "<pre>";
+print_r($result);
+echo "</pre>";
 ?>
 
